@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class RelayRace : MonoBehaviour
@@ -10,14 +7,10 @@ public class RelayRace : MonoBehaviour
     [SerializeField] private Transform childTransform;
     [SerializeField] private float speed;
 
-
-
     private Vector3 target;
     private Transform curentBollTransform;
     private int curentBollActiv = 0;
     private int curentPoint = 0;
-
-
 
     void Start()
 
@@ -31,13 +24,10 @@ public class RelayRace : MonoBehaviour
         {
             curentBollTransform = bolls[curentBollActiv];
         }
-
-
     }
 
     void Update()
     {
-
         curentBollTransform.position = Vector3.MoveTowards(curentBollTransform.position, target, speed * Time.deltaTime);
 
 
